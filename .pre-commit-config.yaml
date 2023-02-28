@@ -1,0 +1,29 @@
+repos:
+  # Format C++ code with Clang-Format - automatically applying the changes
+  - repo: https://github.com/pre-commit/mirrors-clang-format
+    rev: v15.0.7
+    hooks:
+      - id: clang-format
+        args:
+        - --style=file
+        exclude: ^ext/
+
+  # Add some general purpose useful hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      # Make sure that contained YAML files are well-formed
+      - id: check-yaml
+      # Trim trailing whitespace of all sorts
+      - id: trailing-whitespace
+      # Apply a file size limit of 500kB
+      - id: check-added-large-files
+      # Unify file endings
+      - id: end-of-file-fixer
+
+  # CMake Formatting/Linting Utility
+  - repo: https://github.com/cheshirekow/cmake-format-precommit
+    rev: v0.6.13
+    hooks:
+      - id: cmake-format
+      - id: cmake-lint
