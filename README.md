@@ -37,9 +37,10 @@ Basic classes for each asset type. Should include an efficient implementation th
 ## Pricing
 Intrinsic value pricing formulas for equities along with random walk pricing strategies. Also include common options pricing methods. 
 
-## Services
+## Utilities
 - Logging System:  Gathers logs from all components for debugging and reports 
 - Visualizations: Display trading visualizations such as positions, trades, overall P/L, etc 
+- Backtesting system: Allow for tests to be run on historical data and include performance metrics 
 
 ## Strategy 
 - Signal Component saying we *should* trade (not a guarantee, as the offer may no longer exist)
