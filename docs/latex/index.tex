@@ -1,0 +1,55 @@
+\label{index_md__home_danny_code_projects_quantsc_qsc_trading_README}%
+\Hypertarget{index_md__home_danny_code_projects_quantsc_qsc_trading_README}%
+Quant SC\textquotesingle{}s implementation of a high frequency trading system in c++.\hypertarget{index_autotoc_md1}{}\doxysection{Resources\+:}\label{index_autotoc_md1}
+\hypertarget{index_autotoc_md2}{}\doxysubsection{Quantlib\+: A C++ Quantitative Finance Library}\label{index_autotoc_md2}
+\href{https://github.com/lballabio/QuantLib}{\texttt{ Github}} \& \href{http://quantlib.org/}{\texttt{ Website}}\hypertarget{index_autotoc_md3}{}\doxysection{Structure}\label{index_autotoc_md3}
+\hypertarget{index_autotoc_md4}{}\doxysubsection{Book Builder}\label{index_autotoc_md4}
+\hypertarget{index_autotoc_md5}{}\doxysubsection{Common}\label{index_autotoc_md5}
+Implements the following classes\+:
+\begin{DoxyItemize}
+\item Stock
+\item Position
+\item Portfolio
+\end{DoxyItemize}\hypertarget{index_autotoc_md6}{}\doxysubsection{Controller}\label{index_autotoc_md6}
+
+\begin{DoxyItemize}
+\item UI/\+CLI to update the strategy parameters or make orders based upon human input.
+\end{DoxyItemize}\hypertarget{index_autotoc_md7}{}\doxysubsection{Examples}\label{index_autotoc_md7}
+
+\begin{DoxyItemize}
+\item Will be used to store examples of using the system
+\end{DoxyItemize}\hypertarget{index_autotoc_md8}{}\doxysubsection{Gateways}\label{index_autotoc_md8}
+
+\begin{DoxyItemize}
+\item Input Gateway\+: Gets prices from exchanges in their format and formats for the system (e.\+g. json -\/\texorpdfstring{$>$}{>} c++ vector)
+\item Out Gateway\+: Sends orders to exchanges in their format (vector -\/\texorpdfstring{$>$}{>} json)
+\item Efficient CRUD operations for storing Data in a strategy-\/usable way
+\end{DoxyItemize}\hypertarget{index_autotoc_md9}{}\doxysubsection{Order Manager}\label{index_autotoc_md9}
+
+\begin{DoxyItemize}
+\item Tracks the order life cycle (creation, execution, update, cancelation, rejection)
+\item If the order is malformed or invalid, it is caught by the order manager to save on time
+\item Includes risk management \& position sizing
+\item Keeps track of all positions and avoids overexposure
+\end{DoxyItemize}\hypertarget{index_autotoc_md10}{}\doxysubsection{Services}\label{index_autotoc_md10}
+
+\begin{DoxyItemize}
+\item Logging System\+: Gathers logs from all components for debugging and reports
+\item Visualizations\+: Display trading visualizations such as positions, trades, overall P/L, etc
+\end{DoxyItemize}\hypertarget{index_autotoc_md11}{}\doxysubsection{Strategy}\label{index_autotoc_md11}
+
+\begin{DoxyItemize}
+\item Signal Component saying we {\itshape should} trade (not a guarantee, as the offer may no longer exist)
+\item Signals are generated from the strategies implemented on the system (momentum, etc)
+\item Execution Component that handles market response and makes trades
+\end{DoxyItemize}\hypertarget{index_autotoc_md12}{}\doxysubsection{Tools}\label{index_autotoc_md12}
+
+\begin{DoxyItemize}
+\item Includes tools for performance evaluation of the system, along with static analysis and best practice checks
+\end{DoxyItemize}\hypertarget{index_autotoc_md13}{}\doxysubsection{Utilities}\label{index_autotoc_md13}
+
+\begin{DoxyItemize}
+\item Backtesting system that to analyze the performance of strategies.
+\item Exchange Simulator to simulate sending orders to an exchange ~\newline
+ 
+\end{DoxyItemize}
